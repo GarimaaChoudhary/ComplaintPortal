@@ -1,0 +1,27 @@
+.main-nav{
+    width:100%;
+    height:2.5rem;
+    display:grid;
+    grid-template-columns:10rem 2fr 1fr 10rem;
+    background-color:#F88C2D;
+
+      
+      
+}
+.logo{
+
+    display:grid;
+    grid-column:2/4;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.5rem;
+    
+}
+
+.SignIn{
+    background-color:#F88C2D;
+    
+    align-items:center;
+    font-size:1rem;
+    
+}
