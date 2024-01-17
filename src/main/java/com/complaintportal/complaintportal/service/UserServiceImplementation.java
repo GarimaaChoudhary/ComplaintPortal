@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.complaintportal.complaintportal.UserException.UserException;
+import com.complaintportal.complaintportal.Exception.UserException;
 import com.complaintportal.complaintportal.config.JwtProvider;
 import com.complaintportal.complaintportal.model.User;
 import com.complaintportal.complaintportal.repository.UserRepository;

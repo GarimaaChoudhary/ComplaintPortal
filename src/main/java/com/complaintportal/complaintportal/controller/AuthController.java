@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.complaintportal.complaintportal.Exception.UserException;
 import com.complaintportal.complaintportal.Request.LoginRequest;
 import com.complaintportal.complaintportal.Response.AuthResponse;
-import com.complaintportal.complaintportal.UserException.UserException;
 import com.complaintportal.complaintportal.config.JwtProvider;
 import com.complaintportal.complaintportal.model.User;
 import com.complaintportal.complaintportal.repository.UserRepository;

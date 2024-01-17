@@ -32,21 +32,31 @@ public class User {
 
 	 private String password;
 	 
-	 private String role;
+	 
 	 
 	 private String mobile;
 	 
 	 @OneToMany(mappedBy="user",cascade=CascadeType.ALL)
 	 private List<Address> address=new ArrayList<>();
 	
-	 
-
-	 
 	 @OneToMany(mappedBy="user",cascade=CascadeType.ALL)
 	 @JsonIgnore
-	 private List<Complaints> complaints=new ArrayList<>();
+	 private List<Complaint> complaint=new ArrayList<>();
+
+	 
+	
 	  
-	 private LocalDateTime createdAt;
+	 public List<Complaint> getComplaint() {
+		return complaint;
+	}
+
+
+
+	public void setComplaint(List<Complaint> complaint) {
+		this.complaint = complaint;
+	}
+
+	private LocalDateTime createdAt;
 	 
 	 public User() {
 	 }
@@ -65,20 +75,21 @@ public class User {
 
 
 
-	public User(Long id, String firstName, String lastName, String email, String password, String role, String mobile,
-			List<Address> address,List<Complaints>complaints,
-			LocalDateTime createdAt) {
+
+
+
+	public User(Long id, String firstName, String lastName, String email, String password, String mobile,
+			List<Address> address, List<Complaint> complaint, LocalDateTime createdAt) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.role = role;
+		
 		this.mobile = mobile;
 		this.address = address;
-	
-		this.complaints = complaints;
+		this.complaint = complaint;
 		this.createdAt = createdAt;
 	}
 
@@ -116,13 +127,7 @@ public class User {
 		this.email = email;
 	}
 
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
+	
 
 	public String getMobile() {
 		return mobile;
@@ -144,15 +149,6 @@ public class User {
 
 
 
-	public List<Complaints> getComplaints() {
-		return complaints;
-	}
-
-
-
-	public void setComplaints(List<Complaints> complaints) {
-		this.complaints = complaints;
-	}
 
 
 

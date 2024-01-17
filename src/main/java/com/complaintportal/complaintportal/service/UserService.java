@@ -1,6 +1,6 @@
 package com.complaintportal.complaintportal.service;
 
-import com.complaintportal.complaintportal.UserException.UserException;
+import com.complaintportal.complaintportal.Exception.UserException;
 import com.complaintportal.complaintportal.model.User;
 
 public interface UserService {

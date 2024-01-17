@@ -1,4 +1,4 @@
-package com.complaintportal.complaintportal.UserException;
+package com.complaintportal.complaintportal.Exception;
 
 public class UserException extends Exception {
 
